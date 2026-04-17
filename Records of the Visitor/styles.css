@@ -1,0 +1,92 @@
+/* การตั้งค่าพื้นฐาน */
+body {
+    font-family: 'Sarabun', 'Tahoma', sans-serif;
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+    background-color: #FDFBF7; /* สีครีมสว่าง สบายตา */
+    color: #4A3728; /* สีน้ำตาลเข้มเกือบดำ อ่านง่ายกว่าสีดำสนิท */
+}
+
+/* ส่วนหัวของเว็บ */
+header {
+    background-color: #FFFFFF;
+    border-bottom: 3px solid #E2D5C3; /* เส้นขอบสีน้ำตาลอ่อน */
+    padding: 40px 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #8B5E3C; /* สีน้ำตาลอบอุ่น */
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.author {
+    color: #3498DB; /* สีฟ้าที่คุณชอบ ใช้เน้นชื่อผู้แต่ง */
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* ส่วนเนื้อหา */
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.card {
+    background: #FFFFFF;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(139, 94, 60, 0.05); /* เงาสีน้ำตาลจางๆ */
+    border: 1px solid #F0E6D6;
+}
+
+/* ลิงก์และปุ่ม */
+a {
+    color: #2980B9; /* สีฟ้าเข้มสำหรับลิงก์ */
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: #8B5E3C; /* เปลี่ยนเป็นน้ำตาลเมื่อเอาเม้าส์วาง */
+}
+
+/* รายชื่อตอนในหน้าแรก */
+.chapter-list {
+    list-style: none;
+    padding: 0;
+}
+
+.chapter-list li {
+    margin: 15px 0;
+    border-bottom: 1px dashed #E2D5C3;
+}
+
+.chapter-list a {
+    display: block;
+    padding: 10px;
+    font-size: 1.2rem;
+}
+
+/* ปุ่มนำทาง (หน้าถัดไป/ย้อนกลับ) */
+.nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.btn {
+    background-color: #3498DB; /* ปุ่มสีฟ้า */
+    color: white !important;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #2980B9;
+    transform: translateY(-2px);
+}
