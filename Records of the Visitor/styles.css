@@ -1,29 +1,68 @@
+/* การตั้งค่าตัวแปร (CSS Variables) */
+:root {
+
+    --base-font-size: 24px; 
+    --primary-brown: #8B5E3C;
+    --primary-blue: #3498DB;
+    --dark-blue: #2980B9;
+    --bg-cream: #FDFBF7;
+    --border-color: #E2D5C3;
+}
+
 /* การตั้งค่าพื้นฐาน */
 body {
     font-family: 'Sarabun', 'Tahoma', sans-serif;
+    font-size: var(--base-font-size);
     line-height: 1.8;
     margin: 0;
     padding: 0;
-    background-color: #FDFBF7; /* สีครีมสว่าง สบายตา */
-    color: #4A3728; /* สีน้ำตาลเข้มเกือบดำ อ่านง่ายกว่าสีดำสนิท */
+    background-color: var(--bg-cream);
+    color: #4A3728;
+}
+
+/* ส่วนควบคุมขนาดตัวอักษร (Slider) */
+.font-control-container {
+    background: #F0E6D6;
+    padding: 15px 25px;
+    border-radius: 50px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid var(--primary-brown);
+    box-shadow: 0 2px 10px rgba(139, 94, 60, 0.1);
+}
+
+.font-slider {
+    flex-grow: 1;
+    cursor: pointer;
+    accent-color: var(--primary-brown); /* สีของปุ่มเลื่อน */
+    height: 8px;
+    border-radius: 5px;
+}
+
+#fontSizeDisplay {
+    font-weight: bold;
+    color: var(--primary-brown);
+    min-width: 45px;
 }
 
 /* ส่วนหัวของเว็บ */
 header {
     background-color: #FFFFFF;
-    border-bottom: 3px solid #E2D5C3; /* เส้นขอบสีน้ำตาลอ่อน */
+    border-bottom: 3px solid var(--border-color);
     padding: 40px 20px;
     text-align: center;
 }
 
 h1 {
-    color: #8B5E3C; /* สีน้ำตาลอบอุ่น */
+    color: var(--primary-brown);
     margin: 0;
     font-size: 2.5rem;
 }
 
 .author {
-    color: #3498DB; /* สีฟ้าที่คุณชอบ ใช้เน้นชื่อผู้แต่ง */
+    color: var(--primary-blue);
     font-weight: bold;
     margin-top: 10px;
 }
@@ -39,19 +78,26 @@ h1 {
     background: #FFFFFF;
     padding: 40px;
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(139, 94, 60, 0.05); /* เงาสีน้ำตาลจางๆ */
+    box-shadow: 0 4px 15px rgba(139, 94, 60, 0.05);
     border: 1px solid #F0E6D6;
+}
+
+/* เนื้อหานิยาย */
+.novel-content {
+    /* ขนาดฟอนต์จะปรับตามบาร์เลื่อนอัตโนมัติ */
+    font-size: var(--base-font-size);
+    margin-top: 20px;
 }
 
 /* ลิงก์และปุ่ม */
 a {
-    color: #2980B9; /* สีฟ้าเข้มสำหรับลิงก์ */
+    color: var(--dark-blue);
     text-decoration: none;
     transition: 0.3s;
 }
 
 a:hover {
-    color: #8B5E3C; /* เปลี่ยนเป็นน้ำตาลเมื่อเอาเม้าส์วาง */
+    color: var(--primary-brown);
 }
 
 /* รายชื่อตอนในหน้าแรก */
@@ -62,7 +108,7 @@ a:hover {
 
 .chapter-list li {
     margin: 15px 0;
-    border-bottom: 1px dashed #E2D5C3;
+    border-bottom: 1px dashed var(--border-color);
 }
 
 .chapter-list a {
@@ -71,7 +117,7 @@ a:hover {
     font-size: 1.2rem;
 }
 
-/* ปุ่มนำทาง (หน้าถัดไป/ย้อนกลับ) */
+/* ปุ่มนำทาง */
 .nav-buttons {
     display: flex;
     justify-content: space-between;
@@ -79,7 +125,7 @@ a:hover {
 }
 
 .btn {
-    background-color: #3498DB; /* ปุ่มสีฟ้า */
+    background-color: var(--primary-blue);
     color: white !important;
     padding: 12px 25px;
     border-radius: 25px;
@@ -87,6 +133,6 @@ a:hover {
 }
 
 .btn:hover {
-    background-color: #2980B9;
+    background-color: var(--dark-blue);
     transform: translateY(-2px);
 }
